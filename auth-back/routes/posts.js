@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
       completed: false,
     });
     const todoInfo = await todo.save();
-    console.log({ todoInfo });
+    // console.log({ todoInfo });
     res.json(todoInfo);
   } catch (error) {
     console.log(error);

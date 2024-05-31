@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import PortalLayout from "../layout/PortalLayout";
 import { useAuth } from "../auth/AuthProvider";
 import { API_URL } from "../auth/authConstants";
+import {TextField, Typography } from "@mui/material";
 
 interface Todo {
   id: string;
@@ -51,7 +52,7 @@ export default function Dashboard() {
           const todo = (await response.json()) as Todo;
           setTodos([...todos, todo]);
         }
-      } catch (error) {}
+      } catch (error) { }
     }
   }
 
@@ -67,14 +68,16 @@ export default function Dashboard() {
   return (
     <PortalLayout>
       <div className="dashboard">
-        <h1>Dashboard de {auth.getUser()?.name ?? ""}</h1>
+        <h1>Dashboard de {auth.getUser()?.username ?? ""}</h1>
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
+          <Typography>Lista</Typography>
+          <TextField
             placeholder="New task to do..."
+            type="text"
             value={value}
             onChange={(e) => setValue(e.target.value)}
-          />
+            />
+
         </form>
         {todos.map((post: Todo) => (
           <div key={post.id}>

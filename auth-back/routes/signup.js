@@ -4,13 +4,13 @@ const { jsonResponse } = require("../lib/jsonResponse");
 const router = express.Router();
 
 router.post("/", async function (req, res, next) {
-  const { username, password, name } = req.body;
+  const { username, password, email } = req.body;
 
-  if (!username || !password || !name) {
+  if (!username || !password || !email) {
     //return next(new Error("username and password are required"));
     return res.status(409).json(
       jsonResponse(409, {
-        error: "username and password are required",
+        error: "Rellene todos los campos",
       })
     );
   }
@@ -22,12 +22,12 @@ router.post("/", async function (req, res, next) {
     if (userExists) {
       return res.status(409).json(
         jsonResponse(409, {
-          error: "username already exists",
+          error: "El nombre de usuario ya existe",
         })
       );
       //return next(new Error("user already exists"));
     } else {
-      const user = new User({ username, password, name });
+      const user = new User({ username, password, email });
 
       user.save();
 

@@ -13,32 +13,16 @@ label {
   display: block;
 }
 
-.form {
+.formEdit {
   width: 400px;
+  /* text-align: center; */
+
   margin: 0 auto;
 }
 
-input[type="text"],
-[type="password"] {
-  display: block;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 5px 0 10px 0;
-}
-
-input[type="button"],
-button {
-  background-color: rgb(39, 131, 212);
-  padding: 10px;
-  border: 0;
-  min-width: 100px;
-  border-radius: 5px;
-  color: white;
-}
 
 nav {
-  background-color: #eee;
+  background-color: #601717;
 }
 
 nav ul {
@@ -46,12 +30,12 @@ nav ul {
 }
 
 nav ul li {
-  display: inline-block;
+  display: inline-flex;
   padding: 10px;
 }
 
 a {
-  color: rgb(97, 28, 161);
+  color: rgb(157, 151, 151);
   text-decoration: none;
 }
 
@@ -60,8 +44,8 @@ a {
   margin: auto;
 }
 
+
 .errorMessage {
-  background-color: #f2dede;
-  color: #a94442;
-  padding: 10px;
+  color: rgb(235, 23, 23);
+  margin-bottom: 10px;
 }

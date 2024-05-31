@@ -1,13 +1,15 @@
 import { useState } from "react";
 import DefaultLayout from "../layout/DefaultLayout";
 import { useAuth } from "../auth/AuthProvider";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthResponse, AuthResponseError } from "../types/types";
+import { API_URL } from "../auth/authConstants";
+import { Button, TextField, Typography } from "@mui/material";
 
 export default function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [errorResponse, setErrorResponse] = useState("");
 
   const auth = useAuth();
@@ -15,20 +17,20 @@ export default function Signup() {
 
   async function handleSubmit(e: React.ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(username, password, name);
+    console.log(username, password, email);
 
     try {
-      const response = await fetch("http://localhost:3000/api/signup", {
+      const response = await fetch(`${API_URL}/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password, name }),
+        body: JSON.stringify({ username, password, email }),
       });
       if (response.ok) {
         const json = (await response.json()) as AuthResponse;
         console.log(json);
         setUsername("");
         setPassword("");
-        setName("");
+        setEmail("");
         goTo("/");
       } else {
         const json = (await response.json()) as AuthResponseError;
@@ -46,32 +48,41 @@ export default function Signup() {
 
   return (
     <DefaultLayout>
-      <form onSubmit={handleSubmit} className="form">
-        <h1>Signup</h1>
-        {!!errorResponse && <div className="errorMessage">{errorResponse}</div>}
-        <label>Name</label>
-        <input
-          type="text"
-          name="name"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-        />
-        <label>Username</label>
-        <input
-          type="text"
-          name="username"
-          onChange={(e) => setUsername(e.target.value)}
-          value={username}
-        />
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-        />
+      <form onSubmit={handleSubmit} className="formEdit">
 
-        <button>Create account</button>
+        <Typography variant="h4" className="login">Crear cuenta</Typography>
+        <Typography variant="h6">
+          {!!errorResponse && <div className="errorMessage">{errorResponse}</div>}
+        </Typography>
+
+        <TextField
+          name="email"
+          label="Email"
+          type="text"
+          fullWidth
+          margin="normal"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <TextField
+          name="username"
+          label="Usuario"
+          fullWidth
+          margin="normal"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <TextField
+          name="password"
+          label="Contraseña"
+          type="password"
+          fullWidth
+          margin="normal"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />  
+        <Button type="submit" className="formEdit">Crear cuenta</Button>
+        <Typography  className="formEdit">¿Ya tienes cuenta? <Link to="/"><Button>Iniciar sesion</Button></Link></Typography>
       </form>
     </DefaultLayout>
   );

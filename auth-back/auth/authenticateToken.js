@@ -7,9 +7,9 @@ function authenticateToken(req, res, next) {
   log.info("headers", req.headers);
   try {
     token = validateToken(req.headers);
-    //    log.info("Token", token);
+    log.info("Token", token);
   } catch (error) {
-    //console.log("Error", error.message);
+
     log.error(error.message);
     if (error.message === "Token not provided") {
       return res.status(401).json({ error: "Token no proporcionado" });

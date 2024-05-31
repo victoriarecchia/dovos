@@ -1,7 +1,7 @@
 const bunyan = require("bunyan");
 
 const log = bunyan.createLogger({
-  name: "Todoist",
+  name: "Todo List",
   stream: process.stdout,
 });
 

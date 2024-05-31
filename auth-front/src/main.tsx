@@ -10,6 +10,9 @@ import ProtectedRoute from "./routes/ProtectedRoute.tsx";
 import Profile from "./routes/Profile.tsx";
 
 import "./index.css";
+import Info from "./routes/Info.tsx";
+import Donantes  from "./routes/Donantes.tsx";
+import EditProfile from "./routes/EditProfile.tsx";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +33,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/me",
-        element: <Profile />,
+        element: <EditProfile />,
+      },
+      {
+        path: "/profile",
+        element: <Profile/>,
+      },
+      {
+        path: "/donantes",
+        element: <Donantes />,
+      },
+      {
+        path: "/info",
+        element: <Info />,
       },
     ],
   },

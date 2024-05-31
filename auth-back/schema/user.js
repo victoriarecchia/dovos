@@ -4,11 +4,20 @@ const { generateAccessToken, generateRefreshToken } = require("../auth/sign");
 const getUserInfo = require("../lib/getUserInfo");
 const Token = require("../schema/token");
 
+
 const UserSchema = new Mongoose.Schema({
   id: { type: Object },
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  name: { type: String, required: true },
+  email: { type: String, required: true },
+  nombre: { type: String },
+  apellido: { type: String },
+  factor: { type: String },
+  ciudad: { type: String },
+  provincia: { type: String },
+  telefono: { type: Number },
+  rol: {type: String},
+  cp: {type: Number}
 });
 
 UserSchema.pre("save", function (next) {

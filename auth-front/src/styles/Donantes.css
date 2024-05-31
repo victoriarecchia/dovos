@@ -1,0 +1,23 @@
+.donantes-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.donantes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.donantes-item {
+  margin-bottom: 20px;
+}
+
+.user-info {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.ubicacion {
+  margin-top: 10px;
+}

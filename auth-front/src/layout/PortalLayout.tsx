@@ -32,18 +32,24 @@ export default function PortalLayout({ children }: PortalLayoutProps) {
       <header>
         <nav>
           <ul>
+            {/* <li>
+              <Link to="/dashboard">DOVOS</Link>
+            </li> */}
+                <li>
+                  <Link to="/info">Informacion</Link>
+                </li>
             <li>
-              <Link to="/dashboard">Dashboard</Link>
+              <Link to="/profile">Perfil</Link>
             </li>
-            <li>
-              <Link to="/me">Profile</Link>
-            </li>
-            <li>
+                <li>
+                  <Link to="/donantes">Donantes</Link>
+                </li>
+            {/* <li>
               <Link to="/me">{auth.getUser()?.username ?? ""}</Link>
-            </li>
+            </li> */}
             <li>
               <a href="#" onClick={handleSignOut}>
-                Sign out
+                Cerrar Sesión
               </a>
             </li>
           </ul>

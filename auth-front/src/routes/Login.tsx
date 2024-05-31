@@ -1,8 +1,14 @@
 import { useState } from "react";
 import DefaultLayout from "../layout/DefaultLayout";
 import { useAuth } from "../auth/AuthProvider";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthResponse, AuthResponseError } from "../types/types";
+import { API_URL } from "../auth/authConstants";
+
+// import '../index.css'
+import '../styles/Login.css'
+import { Button, TextField, Typography } from "@mui/material";
+import swal from "sweetalert";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -11,21 +17,11 @@ export default function Login() {
 
   const auth = useAuth();
 
-  function handleChange(e: React.ChangeEvent) {
-    const { name, value } = e.target as HTMLInputElement;
-    if (name === "username") {
-      setUsername(value);
-    }
-    if (name === "password") {
-      setPassword(value);
-    }
-  }
-
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     // auth.setIsAuthenticated(true);
     try {
-      const response = await fetch("http://localhost:3000/api/login", {
+      const response = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -41,35 +37,41 @@ export default function Login() {
         const json = (await response.json()) as AuthResponseError;
 
         setErrorResponse(json.body.error);
+
       }
     } catch (error) {
       console.log(error);
     }
   }
   if (auth.isAuthenticated) {
-    return <Navigate to="/dashboard" />;
+    return <Navigate to="/profile" />;
   }
   return (
     <DefaultLayout>
-      <form onSubmit={handleSubmit} className="form">
-        <h1>Login</h1>
-        {!!errorResponse && <div className="errorMessage">{errorResponse}</div>}
-        <label>Username</label>
-        <input
-          name="username"
-          type="text"
-          onChange={handleChange}
+      <form onSubmit={handleSubmit} className="formEdit">
+        <Typography className="login" variant="h4">INICIAR SESION</Typography>
+        <Typography>  {!!errorResponse && <div className="errorMessage">{errorResponse}</div>}</Typography>
+
+        <TextField
+          name="fullName"
+          label="Nombre de usuario"
+          fullWidth
+          margin="normal"
           value={username}
-        />
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          onChange={handleChange}
-          value={password}
+          onChange={(e) => setUsername(e.target.value)}
         />
 
-        <button>Login</button>
+        <TextField
+          name="fullName"
+          label="Contraseña"
+          type="password"
+          fullWidth
+          margin="normal"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      <Button type="submit" color="primary" className="formEdit" >Iniciar sesion</Button>
+        <Typography  className="formEdit">¿No tienes cuenta? <Link to="/signup"><Button>Crear cuenta</Button></Link></Typography> 
       </form>
     </DefaultLayout>
   );
