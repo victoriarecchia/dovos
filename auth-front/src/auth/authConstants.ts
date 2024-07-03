@@ -22,7 +22,7 @@ export const PROVINCIAS =  [
   "Formosa",
   "La Rioja",
   "Santa Fe",
-  "Corrientes"
+  "Corrientes",
 
 ];
 

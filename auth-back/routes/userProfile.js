@@ -25,13 +25,13 @@ router.get("/", authenticateToken, async (req, res) => {
 // Actualizar perfil de usuario
 router.put("/", authenticateToken, async (req, res) => {
   const userId = req.user.id; // ID del usuario autenticado
-  const { nombre, apellido, factor, ciudad, provincia, rol, telefono,cp } = req.body;
+  const { nombre, apellido, factor, ciudad, provincia, rol, telefono, cp } = req.body;
 
   try {
     // Busca al usuario en la base de datos por su ID y actualiza sus datos
     const user = await User.findByIdAndUpdate(
       userId,
-      { nombre, apellido, factor, ciudad, provincia, rol, telefono, cp},
+      { nombre, apellido, factor, ciudad, provincia, rol, telefono, cp },
       { new: true } // Devuelve el documento actualizado
     );
 

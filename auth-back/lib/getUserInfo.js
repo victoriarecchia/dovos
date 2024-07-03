@@ -1,3 +1,6 @@
+
+// OBTENER INFORMACION DEL USUARIO
+
 function getUserInfo(user) {
   return {
     username: user.username,

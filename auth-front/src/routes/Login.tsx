@@ -3,12 +3,10 @@ import DefaultLayout from "../layout/DefaultLayout";
 import { useAuth } from "../auth/AuthProvider";
 import { Link, Navigate } from "react-router-dom";
 import { AuthResponse, AuthResponseError } from "../types/types";
-import { API_URL } from "../auth/authConstants";
-
-// import '../index.css'
+import { API_URL } from "../auth/authConstants";  
 import '../styles/Login.css'
 import { Button, TextField, Typography } from "@mui/material";
-import swal from "sweetalert";
+import FooterLayout from "../layout/FooterLayout";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -28,7 +26,7 @@ export default function Login() {
       });
       if (response.ok) {
         const json = (await response.json()) as AuthResponse;
-        console.log(json);
+        // console.log(json);
 
         if (json.body.accessToken && json.body.refreshToken) {
           auth.saveUser(json);
@@ -40,7 +38,7 @@ export default function Login() {
 
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }
   if (auth.isAuthenticated) {
@@ -49,7 +47,7 @@ export default function Login() {
   return (
     <DefaultLayout>
       <form onSubmit={handleSubmit} className="formEdit">
-        <Typography className="login" variant="h4">INICIAR SESION</Typography>
+        <Typography className="login" variant="h4">Iniciar sesion</Typography>
         <Typography>  {!!errorResponse && <div className="errorMessage">{errorResponse}</div>}</Typography>
 
         <TextField
@@ -73,6 +71,7 @@ export default function Login() {
       <Button type="submit" color="primary" className="formEdit" >Iniciar sesion</Button>
         <Typography  className="formEdit">¿No tienes cuenta? <Link to="/signup"><Button>Crear cuenta</Button></Link></Typography> 
       </form>
+    <FooterLayout/>  
     </DefaultLayout>
   );
 }

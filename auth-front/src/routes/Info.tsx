@@ -1,10 +1,12 @@
 
 import { Typography, Container, Box } from "@mui/material";
 import PortalLayout from "../layout/PortalLayout";
+import FooterLayout from "../layout/FooterLayout";
 
 const Info = () => {
   return (
     <PortalLayout>
+
       <Box  py={2}>
         <Container maxWidth="md">
           <Typography variant="h2" align="center" gutterBottom color="black">
@@ -22,6 +24,7 @@ const Info = () => {
           </Typography>
         </Container>
       </Box>
+      <FooterLayout/>
     </PortalLayout>
   );
 };

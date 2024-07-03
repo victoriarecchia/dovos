@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
     const items = await Todo.find({ idUser: req.user.id });
     return res.json(items);
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     return res.status(500).json({ error: "Error al obtener los todos" });
   }
 });
@@ -27,7 +27,7 @@ router.post("/", async (req, res) => {
     // console.log({ todoInfo });
     res.json(todoInfo);
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({ error: "Error al crear el todo" });
   }
 });

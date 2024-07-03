@@ -24,7 +24,7 @@ function authenticateToken(req, res, next) {
     req.user = { ...decoded.user };
     next();
   } catch (err) {
-    console.log("6 Token inválido", token, err);
+    // console.log("6 Token inválido", token, err);
     return res.status(403).json({ error: "Token inválido" });
   }
 }

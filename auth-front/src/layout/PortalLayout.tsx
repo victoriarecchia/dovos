@@ -44,6 +44,9 @@ export default function PortalLayout({ children }: PortalLayoutProps) {
                 <li>
                   <Link to="/donantes">Donantes</Link>
                 </li>
+                <li>
+                  <Link to="/receptores">Receptores</Link>
+                </li>
             {/* <li>
               <Link to="/me">{auth.getUser()?.username ?? ""}</Link>
             </li> */}

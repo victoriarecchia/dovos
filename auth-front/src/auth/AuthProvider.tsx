@@ -3,6 +3,10 @@
   import requestNewAccessToken from "./requestNewAccessToken";
   import { API_URL } from "./authConstants";
 
+
+  // Auth provider es un componente que va a utilizar UseContext para guardar el estado y 
+  // funciones que vamos a utilizar a lo largo de toda la aplicacion
+
   const AuthContext = createContext({
     isAuthenticated: false,
     getAccessToken: () => {},
@@ -20,6 +24,7 @@
     children: React.ReactNode;
   }
 
+  
   export function AuthProvider({ children }: AuthProviderProps) {
     const [user, setUser] = useState<User | undefined>();
     const [accessToken, setAccessToken] = useState<string>("");
@@ -44,7 +49,7 @@
       accessToken: string,
       refreshToken: string
     ) {
-      console.log("setAccessTokenAndRefreshToken", accessToken, refreshToken);
+      // console.log("setAccessTokenAndRefreshToken", accessToken, refreshToken);
       setAccessToken(accessToken);
       setRefreshToken(refreshToken);
 
@@ -96,7 +101,7 @@
           //no existe access token
           const token = localStorage.getItem("token");
           if (token) {
-            console.log("useEffect: token", token);
+            // console.log("useEffect: token", token);
             const refreshToken = JSON.parse(token).refreshToken;
             //pedir nuevo access token
             getNewAccessToken(refreshToken)
@@ -153,7 +158,7 @@
 
       if (response.ok) {
         const json = await response.json();
-        console.log(json);
+        // console.log(json);
         return json.body;
       }
     } catch (error) {}

@@ -43,7 +43,7 @@ UserSchema.methods.usernameExists = async function (username) {
 };
 
 UserSchema.methods.isCorrectPassword = async function (password, hash) {
-  console.log(password, hash);
+  // console.log(password, hash);
   const same = await bcrypt.compare(password, hash);
 
   return same;
@@ -60,11 +60,10 @@ UserSchema.methods.createRefreshToken = async function (next) {
 
   try {
     await new Token({ token: refreshToken }).save();
-    console.log("Token saved", refreshToken);
+    // console.log("Token saved", refreshToken);
     return refreshToken;
   } catch (error) {
     console.error(error);
-    //next(new Error("Error creating token"));
   }
 };
 

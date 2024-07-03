@@ -1,12 +1,17 @@
 .donantes-container {
-  max-width: 800px;
+  max-width: 600px;
   margin: auto;
-  padding: 20px;
+  /* padding: 20px; */
 }
-
+/* .donantes-container{
+  display: flex;
+  max-width: 800px;
+  padding: 20px;
+} */
 .donantes-list {
   list-style: none;
   padding: 0;
+  /* text-align: center; */
 }
 
 .donantes-item {
@@ -20,4 +25,14 @@
 
 .ubicacion {
   margin-top: 10px;
+}
+
+.donantesContainer{
+  padding: 20px;
+  gap: 20px;
+}
+
+.filters-container{
+  display: flex;
+  margin: 10px;
 }

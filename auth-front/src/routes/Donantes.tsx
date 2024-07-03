@@ -5,6 +5,7 @@ import PortalLayout from "../layout/PortalLayout";
 import { API_URL, FACTORES, PROVINCIAS } from "../auth/authConstants";
 import { useAuth } from "../auth/AuthProvider";
 import '../styles/Donantes.css';
+import FooterLayout from "../layout/FooterLayout";
 
 const Donantes = () => {
   const [users, setUsers] = useState<any[]>([]);
@@ -62,7 +63,7 @@ const Donantes = () => {
 
   return (
     <PortalLayout>
-      <Container>
+      <Container className="donantesContainer">
         <Typography variant="h4" textAlign="center">DONANTES VOLUNTARIOS</Typography>
         <div className="filters-container">
           <FormControl fullWidth margin="normal">
@@ -72,7 +73,7 @@ const Donantes = () => {
               id="factor"
               value={selectedFactor}  
               onChange={handleFactorChange}
-            >
+              >
               <MenuItem value=""> 
                 <em>Todos</em>
               </MenuItem>
@@ -85,7 +86,7 @@ const Donantes = () => {
           </FormControl>
 
           <FormControl fullWidth margin="normal">
-            <InputLabel id="provincia-label">Filtrar por Provincia</InputLabel>
+            <InputLabel id="provincia-label">Filtrar por provincia</InputLabel>
             <Select
               labelId="provincia-label"
               id="provincia"
@@ -102,7 +103,11 @@ const Donantes = () => {
               ))}
             </Select>
           </FormControl>
+          
         </div>
+
+        {/* LISTA DE DONANTES */}
+        <div className="donantes-container">
         <ul className="donantes-list">
           {filteredUsers.map((user, index) => (
             <li key={index} className="donantes-item">
@@ -119,7 +124,9 @@ const Donantes = () => {
             </li>
           ))}
         </ul>
+        </div>
       </Container>
+      <FooterLayout/>  
     </PortalLayout>
   );
 };

@@ -22,7 +22,7 @@ label {
 
 
 nav {
-  background-color: #601717;
+  background-color: #672222;
 }
 
 nav ul {
@@ -48,4 +48,22 @@ a {
 .errorMessage {
   color: rgb(235, 23, 23);
   margin-bottom: 10px;
+}
+/* Estilos para el wrapper que contendrá todo el contenido */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh; /* Mínimo alto de la ventana del navegador */
+}
+
+/* Estilos para el contenido principal */
+.content {
+  flex: 1; /* El contenido principal ocupará el espacio disponible */
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin-top: auto; /* Empuja el footer hacia abajo */
 }
