@@ -18,7 +18,7 @@ const FooterLayout: React.FC<FooterLayoutProps> = ({ children }) => {
       <footer>
         <div className="footer-info">
           <p>Todos los derechos reservados &copy; 2024</p>
-          <p>Politicas de privacidad</p>
+          <a href="/politica" target="blanck" style={{textDecoration:"none", color: "rgb(105, 32, 32)"}}><p>Politicas de privacidad</p></a>
         </div>
       </footer>
     </div>

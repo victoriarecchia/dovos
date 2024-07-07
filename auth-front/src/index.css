@@ -7,6 +7,7 @@ import
 }
 
 body {
+  width: 100%;
   padding: 0;
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -57,16 +58,12 @@ nav ul li {
     gap: 50px;
 }
 
-/* Estilos para el wrapper que contendrá todo el contenido */
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 40vh;
-   /* Mínimo alto de la ventana del navegador */
+li{
+  list-style: none;
+  margin: 5px 0;
+  color: #fffdfd;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
 }
-
-/* Estilos para el contenido principal */
-/* .content {
-  flex: 2; 
-} */
 

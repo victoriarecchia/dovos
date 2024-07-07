@@ -12,6 +12,8 @@ const Donantes = () => {
   const [filteredUsers, setFilteredUsers] = useState<any[]>([]);
   const [selectedFactor, setSelectedFactor] = useState<string>("");
   const [selectedProvincia, setSelectedProvincia] = useState<string>("");
+  const [showNoResultsMessage, setShowNoResultsMessage] = useState<boolean>(false); // Estado para mostrar el mensaje de no resultados
+
   const auth = useAuth();
 
   useEffect(() => {
@@ -58,6 +60,7 @@ const Donantes = () => {
       (!provincia || user.provincia === provincia)
     );
     setFilteredUsers(filtered);
+    setShowNoResultsMessage(filtered.length === 0)
   };
 
   return (
@@ -70,7 +73,7 @@ const Donantes = () => {
         {/* Filtros de busqueda */}
         <div className="filters-container">
           <FormControl fullWidth margin="normal">
-            <InputLabel id="factor-label">Filtrar por Factor Sanguíneo</InputLabel>
+            <InputLabel id="factor-label">Filtrar por factor sanguíneo</InputLabel>
             <Select
               labelId="factor-label"
               id="factor"
@@ -107,7 +110,7 @@ const Donantes = () => {
             </Select>
           </FormControl>
         </div>
-
+        {filteredUsers.length > 0 ? 
         <div className="donantes-container">
           <ul className="donantes-list">
             {filteredUsers.map((user, index) => (
@@ -124,7 +127,15 @@ const Donantes = () => {
             ))}
           </ul>
         </div>
-      </div>
+        : (
+          // Mensaje de no resultados
+          showNoResultsMessage && (
+            <Typography variant="h4" style={{ textAlign: 'center', marginTop: 20 }}>
+              No se encontraron personas con los filtros seleccionados.
+            </Typography>
+          )
+        )}
+      </div> 
       <FooterLayout />
     </PortalLayout>
   );

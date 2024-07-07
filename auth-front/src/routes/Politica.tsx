@@ -6,119 +6,119 @@ const Politica = () => {
     <DefaultLayout>
       <h2 style={{textAlign: 'center'}}>POLITICA DE PRIVACIDAD Y PROTECCION DE DATOS PERSONALES DE DOVOS</h2>
 
-      <p>
-        <strong>CLÁUSULA (1). Definiciones</strong>
+      <p style={{padding: '20px'}}>
+        <strong style={{fontSize:'18px'}}>CLÁUSULA (1). Definiciones</strong>
 
 
-        <br /> Acceder: una o más acciones del Usuario necesarias: tratándose del Sitio, para el Acceso del Sitio; o, tratándose de un Sitio de Tercero, para abrir conforme al protocolo de Internet denominado Hypertext Transfer Protocol (HTTP) o al protocolo de Internet denominado Hypertext Transfer Protocol Secure (HTTPS) una o más conexiones HTTP o HTTPS, respectivamente, entre la dirección de Internet de dicho Sitio de Tercero y la dirección de Internet de un dispositivo utilizado por el Usuario para abrir cada dicha conexión.
+        <br /> <strong>Acceder:</strong> una o más acciones del Usuario necesarias: tratándose del Sitio, para el Acceso del Sitio; o, tratándose de un Sitio de Tercero, para abrir conforme al protocolo de Internet denominado Hypertext Transfer Protocol (HTTP) o al protocolo de Internet denominado Hypertext Transfer Protocol Secure (HTTPS) una o más conexiones HTTP o HTTPS, respectivamente, entre la dirección de Internet de dicho Sitio de Tercero y la dirección de Internet de un dispositivo utilizado por el Usuario para abrir cada dicha conexión.
 
-        <br />Acceso del Sitio: la apertura conforme al protocolo de Internet denominado Hypertext Transfer Protocol (HTTP) o al protocolo de Internet denominado Hypertext Transfer Protocol Secure (HTTPS) de una o más conexiones HTTP o HTTPS, respectivamente, entre la dirección de Internet del Sitio y la dirección de Internet de un dispositivo utilizado por el Usuario para abrir cada dicha conexión.
+        <br /><strong>Acceso del sitio:</strong> la apertura conforme al protocolo de Internet denominado Hypertext Transfer Protocol (HTTP) o al protocolo de Internet denominado Hypertext Transfer Protocol Secure (HTTPS) de una o más conexiones HTTP o HTTPS, respectivamente, entre la dirección de Internet del Sitio y la dirección de Internet de un dispositivo utilizado por el Usuario para abrir cada dicha conexión.
 
-        <br /> Actividad en el Sitio: la utilización por el Usuario de una o más funcionalidades incluidas y habilitadas en el Sitio.
+        <br /> <strong>Actividad en el sitio:</strong>  la utilización por el Usuario de una o más funcionalidades incluidas y habilitadas en el Sitio.
 
-        <br /> Administrador: la siguiente persona jurídica: Dovos Cordoba, con CUIT ....., inscripta en la Provincia de Córdoba con el N° ...... y con correo electrónico en dovosgestor@gmail.com.
+        <br /> <strong>Administrador:</strong> la siguiente persona jurídica: Dovos Cordoba, con CUIT ....., inscripta en la Provincia de Córdoba con el N° ...... y con correo electrónico en dovosgestor@gmail.com.
 
-        <br /> Autoridad Pública: cualquier órgano legislativo, ejecutivo o judicial de carácter nacional, provincial o municipal.
+        <br /> <strong>Autoridad Pública:</strong> cualquier órgano legislativo, ejecutivo o judicial de carácter nacional, provincial o municipal.
 
-        <br />  Cookie: cada archivo digital que cumple los siguientes requisitos:
+        <br />  <strong>Cookie:</strong> cada archivo digital que cumple los siguientes requisitos:
         <br />(1) es creado por un sitio de Internet accedido por el Usuario por primera vez;
         <br />(2) almacena uno o más datos sobre el Usuario (por ej., su identificación de acceso) y/o la actividad del Usuario en dicho sitio de Internet (por ej., las selecciones realizadas) con la finalidad de facilitar al Usuario el acceso a dicho sitio de Internet y la actividad en el mismo al menos por segunda vez;
         <br />(3) es almacenado por el navegador web que el Usuario utilizó para acceder a dicho sitio de Internet por primera vez; y
         <br />(4) puede ser leído solamente o leído y modificado por dicho sitio de Internet si el Usuario vuelve a acceder a dicho sitio de Internet utilizando el mismo navegador web al menos por segunda vez.
 
-        <br /> Credencial de Seguridad: uno o más Datos Personales y/u otros datos u otra información suministrados por una persona humana, por sí misma o por intermedio de un programa informático no autorizado previa y expresamente por el Administrador, para otorgar a dicha persona humana una identidad única e inequívoca como Usuario.
+        <br /> <strong>Credencial de Seguridad:</strong> uno o más Datos Personales y/u otros datos u otra información suministrados por una persona humana, por sí misma o por intermedio de un programa informático no autorizado previa y expresamente por el Administrador, para otorgar a dicha persona humana una identidad única e inequívoca como Usuario.
 
-        <br />Dato Personal: cada dato de propiedad del Usuario (incluyendo, sin limitación, cada dato sobre el dispositivo utilizado por el Usuario para Acceder al Sitio -modelo, sistema operativo, conexión, etc.- y la ubicación geográfica del Usuario durante la Permanencia en el Sitio) que cumple los siguientes requisitos: (1) conforme a la Ley 25326 no está prohibido al Administrador recolectarlo del Usuario conforme a la Cláusula Recolección de Datos Personales; y (2) no es de conocimiento público al momento en que el Administrador lo recolecta del Usuario conforme a la Cláusula Recolección de Datos Personales.
+        <br /> <strong>Dato Personal:</strong> cada dato de propiedad del Usuario (incluyendo, sin limitación, cada dato sobre el dispositivo utilizado por el Usuario para Acceder al Sitio -modelo, sistema operativo, conexión, etc.- y la ubicación geográfica del Usuario durante la Permanencia en el Sitio) que cumple los siguientes requisitos: <br/>(1) conforme a la Ley 25326 no está prohibido al Administrador recolectarlo del Usuario conforme a la Cláusula Recolección de Datos Personales; y <br/>(2) no es de conocimiento público al momento en que el Administrador lo recolecta del Usuario conforme a la Cláusula Recolección de Datos Personales.
 
-        <br />Ley 25326: la Ley N° 25.326 y el Decreto N° 1558/2001 del Poder Ejecutivo nacional.
+        <br /><strong>Ley 25326: </strong>la Ley N° 25.326 y el Decreto N° 1558/2001 del Poder Ejecutivo nacional.
 
-        <br />Permanecer en el Sitio: una o más acciones del Usuario, en el Sitio y conforme a los TyC, necesarias para prolongar la Permanencia en el Sitio.
+        <br /> <strong>Permanecer en el sitio:</strong> una o más acciones del Usuario, en el Sitio y conforme a los TyC, necesarias para prolongar la Permanencia en el Sitio.
 
-        <br />Permanencia en el Sitio: el tiempo que transcurriere desde, e incluyendo, el Acceso del Sitio hasta, e incluyendo, la Salida del Sitio.
+        <br /> <strong>Permanencia en el sitio</strong>Permanencia en el Sitio: el tiempo que transcurriere desde, e incluyendo, el Acceso del Sitio hasta, e incluyendo, la Salida del Sitio.
 
-        <br />Propietario: el Administrador.
+        <br /><strong>Propietario: </strong> el Administrador.
 
-        <br /> Salida del Sitio: el cierre conforme al protocolo de Internet denominado Hypertext Transfer Protocol (HTTP) o al protocolo de Internet denominado Hypertext Transfer Protocol Secure (HTTPS) de la única o la última, según el caso, conexión HTTP o HTTPS, respectivamente, abierta por el Acceso del Sitio.
+        <br /> <strong>Salida del sitio:</strong>l cierre conforme al protocolo de Internet denominado Hypertext Transfer Protocol (HTTP) o al protocolo de Internet denominado Hypertext Transfer Protocol Secure (HTTPS) de la única o la última, según el caso, conexión HTTP o HTTPS, respectivamente, abierta por el Acceso del Sitio.
 
-        <br />  Sitio: cada archivo digital vacío o conteniendo uno o más textos (originales o reproducciones autorizadas), imágenes, videos, sonidos, gráficos, iconos, logotipos, isotipos, marcas, dibujos, emblemas, combinaciones de colores, combinación de letras y números, frases publicitarias u otro contenido digital o digitalizado (distinto de instrucciones de programa informático) y cada archivo de programa informático (ya sea que utilice uno o más de los anteriores archivos digitales o no) directa o indirectamente asociado por el Administrador con la dirección de Internet a la que corresponde el siguiente nombre de dominio:
+        <br />  <strong>Sitio:</strong>cada archivo digital vacío o conteniendo uno o más textos (originales o reproducciones autorizadas), imágenes, videos, sonidos, gráficos, iconos, logotipos, isotipos, marcas, dibujos, emblemas, combinaciones de colores, combinación de letras y números, frases publicitarias u otro contenido digital o digitalizado (distinto de instrucciones de programa informático) y cada archivo de programa informático (ya sea que utilice uno o más de los anteriores archivos digitales o no) directa o indirectamente asociado por el Administrador con la dirección de Internet a la que corresponde el siguiente nombre de dominio:
 
         dovos.org
 
-        <br />Sitio de Tercero: cada dirección de Internet distinta del Sitio.
+        <br /> <strong>Sitio de tercero:</strong>cada dirección de Internet distinta del Sitio.
 
-        <br /> TyC: los términos y condiciones del Sitio publicados en la sección “Términos y Condiciones” del Sitio.
+        <br /> <strong>TyC</strong>los términos y condiciones del Sitio publicados en la sección “Términos y Condiciones” del Sitio.
 
-        <br />Usuario: cada persona humana que Accede al Sitio, Permanece en el Sitio y realiza la Actividad en el Sitio, por sí misma o por intermedio de un programa informático no autorizado previa y expresamente por el Administrador, y cada Usuario Necesario; estipulándose que la Actividad en el Sitio realizada con Credencial de Seguridad se considerará realizada por la persona humana que suministró, por sí misma o por intermedio de un programa informático no autorizado previa y expresamente por el Administrador, dicha Credencial de Seguridad.
+        <br /> <strong>Usuario</strong>ada persona humana que Accede al Sitio, Permanece en el Sitio y realiza la Actividad en el Sitio, por sí misma o por intermedio de un programa informático no autorizado previa y expresamente por el Administrador, y cada Usuario Necesario; estipulándose que la Actividad en el Sitio realizada con Credencial de Seguridad se considerará realizada por la persona humana que suministró, por sí misma o por intermedio de un programa informático no autorizado previa y expresamente por el Administrador, dicha Credencial de Seguridad.
 
-        <br /> Usuario Necesario: cada persona humana que es titular o delegada de la responsabilidad parental o representante necesaria, según el caso, de otra persona humana que Accede al Sitio, por sí misma o por intermedio de un programa informático no autorizado previa y expresamente por el Administrador, y no tiene 18 (dieciocho) años de edad cumplidos y no está emancipado por matrimonio o por otra causa no goza de capacidad civil para Acceder al Sitio, Permanecer en el Sitio y realizar la Actividad en el Sitio cumpliendo los TyC.
+        <br /> <strong>Usuario necesario</strong>cada persona humana que es titular o delegada de la responsabilidad parental o representante necesaria, según el caso, de otra persona humana que Accede al Sitio, por sí misma o por intermedio de un programa informático no autorizado previa y expresamente por el Administrador, y no tiene 18 (dieciocho) años de edad cumplidos y no está emancipado por matrimonio o por otra causa no goza de capacidad civil para Acceder al Sitio, Permanecer en el Sitio y realizar la Actividad en el Sitio cumpliendo los TyC.
         <br />
         <br />
-        <strong> CLÁUSULA (2). Desarrollo del Sitio</strong>
+        <strong style={{fontSize:'18px'}}> CLÁUSULA (2). Desarrollo del Sitio</strong>
         <br />
 
-        (a) El Sitio ha sido desarrollado con respeto por la privacidad del Usuario en Internet y considerando el deber del Administrador de proteger, conforme a la Ley 25326, cualesquiera Datos Personales que el Usuario transmitiere al Sitio en relación con el Acceso del Sitio, la Permanencia en el Sitio, la Actividad en el Sitio y la Salida del Sitio.
+        (a) El Sitio ha sido desarrollado con respeto por la privacidad del Usuario en Internet y considerando el deber del Administrador de proteger, conforme a la Ley 25326, cualesquiera Datos Personales que el Usuario transmitiere al Sitio en relación con el Acceso del Sitio, la Permanencia en el Sitio, la Actividad en el Sitio y la Salida del Sitio. <br/>
 
         (b) La presente Política de Privacidad y Protección de Datos Personales es parte de los TyC y debe ser leída e interpretada en conjunto con los TyC.
 
         <br />
         <br />
-        <strong>CLÁUSULA (3). Recolección de Datos Personales</strong>
+        <strong style={{fontSize:'18px'}}>CLÁUSULA (3). Recolección de Datos Personales</strong>
         <br />
         Cada Acceso del Sitio automáticamente representa para el Usuario su consentimiento sin condiciones para que el Administrador pueda recolectar, en el Sitio y/o por correo electrónico recibido del Usuario, uno o más Datos Personales con las siguientes finalidades salvo indicación expresa en contrario del Administrador en el Sitio y/o por correo electrónico enviado al Usuario:
 
-        (a) mejorar la interacción entre el Usuario y el Sitio durante la Permanencia en el Sitio; y
+        <br/> (a) mejorar la interacción entre el Usuario y el Sitio durante la Permanencia en el Sitio; y
 
-        (b) elaborar estadísticas anónimas (es decir, no susceptibles de posibilitar la identificación del Usuario) del Sitio; y
+        <br/>(b) elaborar estadísticas anónimas (es decir, no susceptibles de posibilitar la identificación del Usuario) del Sitio; y
 
-        (c) cumplir una orden de una Autoridad Pública recibida por el Administrador.
+        <br/> (c) cumplir una orden de una Autoridad Pública recibida por el Administrador.
 
         <br />
         <br />
-        <strong>CLÁUSULA (4). Cookies</strong>
+        <strong style={{fontSize:'18px'}}>CLÁUSULA (4). Cookies</strong>
         <br />
         TyC
 
         El Administrador deberá obtener del Usuario, en el Sitio y/o por correo electrónico recibido del Usuario, el consentimiento sin condiciones del Usuario para guardar una o más Cookies del Sitio en el dispositivo utilizado por el Usuario para Acceder al Sitio y utilizar dichas Cookies del Sitio antes de guardar éstas en dicho dispositivo.
         <br />    <br />
 
-        <strong>CLÁUSULA (5). Negativa del Usuario</strong>
+        <strong style={{fontSize:'18px'}}>CLÁUSULA (5). Negativa del Usuario</strong>
         <br/>
         El Usuario:
 
-        (a) podrá en cualquier momento durante la Permanencia en el Sitio comunicar al Administrador en el Sitio su negativa sin condiciones a:
+        <br/>(a) podrá en cualquier momento durante la Permanencia en el Sitio comunicar al Administrador en el Sitio su negativa sin condiciones a:
 
-        (I) suministrar uno o más Datos Personales al Administrador conforme a la Cláusula Recolección de Datos Personales; y/o
+        <br/>(I) suministrar uno o más Datos Personales al Administrador conforme a la Cláusula Recolección de Datos Personales; y/o
 
-        (II) permitir el almacenamiento y la utilización de una o más Cookies del Sitio conforme a la Cláusula Cookies; y
+        <br/>(II) permitir el almacenamiento y la utilización de una o más Cookies del Sitio conforme a la Cláusula Cookies; y
 
-        (b) reconoce y acepta que la interacción entre el Usuario y el Sitio durante la Permanencia en el Sitio podría ser menos satisfactoria (cuantitativa y/o cualitativamente) que lo sería por el contrario si:
+        <br/>(b) reconoce y acepta que la interacción entre el Usuario y el Sitio durante la Permanencia en el Sitio podría ser menos satisfactoria (cuantitativa y/o cualitativamente) que lo sería por el contrario si:
 
-        (I) comunicare una negativa conforme al apartado (a); o
+        <br/>(I) comunicare una negativa conforme al apartado (a); o
 
-        (II) suministrare Datos Personales incompletos, inexactos o falsos a los fines de la Cláusula Recolección de Datos Personales.
+        <br/>(II) suministrare Datos Personales incompletos, inexactos o falsos a los fines de la Cláusula Recolección de Datos Personales.
 
         <br />
         <br />
-        <strong>CLÁUSULA (6). Almacenamiento de Datos Personales</strong>
+        <strong style={{fontSize:'18px'}}>CLÁUSULA (6). Almacenamiento de Datos Personales</strong>
         <br />
 
         El Administrador almacenará los Datos Personales en una base de datos cuya administración será responsabilidad exclusiva del Administrador en el siguiente domicilio: Córdoba, Dpto. Capital, Provincia de Córdoba.
 
         <br />    <br />
-        <strong>CLÁUSULA (7). Gestión de Datos Personales</strong>
+        <strong style={{fontSize:'18px'}}>CLÁUSULA (7). Gestión de Datos Personales</strong>
         <br />
 
         Los Datos Personales que el Administrador recolectare conforme a la Cláusula Recolección de Datos Personales podrán ser almacenados, procesados y transferidos exclusivamente por:
 
-        (a) el Administrador; y
+        <br/>(a) el Administrador; y
 
-        (b) cada persona humana o jurídica con la que el Administrador celebrare un contrato de transferencia o cesión de uno o más Datos Personales; y
+        <br/>(b) cada persona humana o jurídica con la que el Administrador celebrare un contrato de transferencia o cesión de uno o más Datos Personales; y
 
-        (c) cada Autoridad Pública que requiriere al Administrador la transferencia o cesión de uno o más Datos Personales por resolución judicial y cuando medien razones fundadas relativas a la seguridad pública, la defensa nacional o la salud pública.
+        <br/>(c) cada Autoridad Pública que requiriere al Administrador la transferencia o cesión de uno o más Datos Personales por resolución judicial y cuando medien razones fundadas relativas a la seguridad pública, la defensa nacional o la salud pública.
 
         <br />
         <br />
-        <strong>CLÁUSULA (8). Derechos del Usuarios</strong>
+        <strong style={{fontSize:'18px'}}>CLÁUSULA (8). Derechos del Usuarios</strong>
 
         <br />(a) Conforme a la Ley 25326 el Usuario podrá solicitar al Administrador respecto de uno o más Datos Personales:
 
@@ -157,7 +157,7 @@ const Politica = () => {
 
         <br />
         <br />
-        <strong>CLÁUSULA (9). Modificaciones</strong>
+        <strong style={{fontSize:'18px'}}>CLÁUSULA (9). Modificaciones</strong>
         <br />
 
         (a) El Administrador:
@@ -180,14 +180,14 @@ const Politica = () => {
 
         <br />
         <br />
-        <strong>CLÁUSULA (10). Sitio de Tercero</strong>
+        <strong style={{fontSize:'18px'}}>CLÁUSULA (10). Sitio de Tercero</strong>
         <br />
 
         Esta Política de Privacidad y Protección de Datos Personales no se aplica a ningún Sitio de Tercero ya sea antes del Acceso del Sitio, durante la Permanencia en el Sitio a partir del Acceso del Sitio de Tercero de que se trate mediante la utilización por el Usuario de uno o más enlaces a dicho Sitio de Tercero incluidos y habilitados en el Sitio para Acceder a dicho Sitio de Tercero o después de la Salida del Sitio.
         <br />
         <br />
 
-        <strong>CLÁUSULA (11). Ley Aplicable</strong>
+        <strong style={{fontSize:'18px'}}>CLÁUSULA (11). Ley Aplicable</strong>
         <br />
 
         Esta Política de Privacidad y Protección de Datos Personales se rige exclusivamente por la ley de la República Argentina.

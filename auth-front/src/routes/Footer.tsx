@@ -5,13 +5,12 @@ import PortalLayout from "../layout/PortalLayout";
 const Info = () => {
   return (
     <PortalLayout>
-        <Container maxWidth="md">
+        <Container maxWidth="md" className="footer">
           <Typography variant="h2" align="center" gutterBottom color="black">
             DOVOS
           </Typography>
-
           <Typography  paragraph color="black">
-            Politica de privacidad          </Typography>
+            Politica de privacidad </Typography>
         </Container>
     </PortalLayout>
   );

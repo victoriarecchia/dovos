@@ -72,7 +72,7 @@ const Receptores = () => {
 
         {/* Filtros de busqueda */}
         <div className="filters-container">
-          <FormControl fullWidth margin="normal" color="primary" variant="filled">
+          <FormControl fullWidth margin="normal" color="primary">
             <InputLabel id="factor-label">Filtrar por Factor Sanguíneo</InputLabel>
             <Select
               labelId="factor-label"
@@ -91,7 +91,7 @@ const Receptores = () => {
             </Select>
           </FormControl>
 
-          <FormControl fullWidth margin="normal" variant="filled">
+          <FormControl fullWidth margin="normal">
 
             <InputLabel id="provincia-label" >Filtrar por Provincia</InputLabel>
             <Select

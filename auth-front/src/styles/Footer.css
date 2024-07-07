@@ -1,14 +1,40 @@
 /* Estilos para el footer */
-footer {
-  background-color: #626262;
+.footer {
   color: white;
-    margin-top: auto; /* Empuja el footer hacia abajo */
+    margin-top: auto; 
     display: flex;
+}
+
+footer {
+  background-color: rgb(214, 214, 214);;
+  color: rgb(105, 32, 32);
+  font-weight: 600;
+  position: sticky;
+  bottom: 0;
+    
 }
 
 .footer-info{
   display: flex;
   /* flex-direction: row ; */
   justify-content: center;
+  align-items: center;
+  text-align: center;
   gap: 50px;
 }
+
+/* Estilos para el wrapper que contendrá todo el contenido */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  /* width: fit-content; */
+  /* display: block; */
+   /* Mínimo alto de la ventana del navegador */
+}
+
+/* Estilos para el contenido principal */
+.content {
+  flex: 1; 
+}
+

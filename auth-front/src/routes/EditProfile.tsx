@@ -30,7 +30,7 @@ const EditProfile: React.FC = () => {
     cp: 0
   });
 
-  const [editMode, setEditMode] = useState(false);
+  const [editMode, setEditMode] = useState(true);
   const auth = useAuth();
 
   useEffect(() => {

@@ -12,6 +12,7 @@ import Donantes  from "./routes/Donantes.tsx";
 import EditProfile from "./routes/EditProfile.tsx";
 import Receptores from "./routes/Receptores.tsx";
 import Politica from "./routes/Politica.tsx";
+import DeleteAccount from "./routes/Delete.tsx";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
         path: "/profile",
         element: <Profile/>,
       },
+      {
+        path: "/",
+        element: <DeleteAccount />,
+      },
+  
 
       {
         path: "/donantes",

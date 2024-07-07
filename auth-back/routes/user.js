@@ -24,10 +24,39 @@ router.get("/users", async function (req, res, next) {
 });
 
 
+router.delete("/", async function (req, res, next) {
+  try {
+    const refreshToken = validateToken(req.headers);
 
+    await Token.findOneAndRemove({ token: refreshToken });
+    res.json({
+      success: "Token removed",
+    });
+  } catch (ex) {
+    return next(new Error("Error loging out the user " + ex.message));
+  }
+});
+
+router.delete('/:_id', async (req, res) => {
+  const userId = req.params._id;
+
+  try {
+    const deletedUser = await User.findByIdAndDelete(userId);
+
+    if (!deletedUser) {
+      return res.status(404).json({ error: 'Usuario no encontrado' });
+    }
+
+    res.json({ message: 'Usuario eliminado correctamente' });
+  } catch (error) {
+    console.error('Error al eliminar usuario:', error);
+    res.status(500).json({ error: 'Error interno al eliminar usuario' });
+  }
+});
 
 
 module.exports = router;
+
 
 
 

@@ -7,7 +7,9 @@
   /* justify-content: flex-start; */
   flex-wrap: wrap
 }
-
+.user-info p{
+  color: black;
+}
 .user-info {
   width: 300px;
   margin: 10px;
@@ -20,10 +22,16 @@
   background-color: rgb(255, 255, 255);
 }
 
+/* Nombre de los donantes/receptores */
 .userName{
-  font-size: 20px;
+  font-size: 24px;
   font-weight:500;
+  color: black;
+}
 
+.nombre{
+  color: black;
+  font-size: 20px;
 }
 
 .donantes-item {
@@ -47,6 +55,6 @@
 
 .tituloListas{
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
 }
 

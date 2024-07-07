@@ -46,11 +46,6 @@ UserSchema.methods.usernameExists = async function (username) {
   return result.length > 0;
 };
 
-// Metodo para ver si existe el email ingresado
-// UserSchema.methods.emailExists = async function (email) {
-//   const result = await Mongoose.model("User").find({ email: email });
-//   return result.length > 0;
-// };
 
 // Metodo para ver si la contraseña es correcta.
 UserSchema.methods.isCorrectPassword = async function (password, hash) {
