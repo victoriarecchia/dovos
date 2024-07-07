@@ -1,24 +1,7 @@
 
-// import React from "react";
-
-// interface PortalLayoutProps {
-//   children?: React.ReactNode;
-// }
-// export default function FooterLayout({ children }: PortalLayoutProps) {
-//   return (
-//     <>
-//       <main>{children}</main>
-//       <footer>
-//     <div className="footer-info">
-//         <p>Todos los derechos reservados &copy; 2024</p>
-//         <p>Otra información del footer aquí...</p>
-//     </div>
-// </footer>
-//     </>
-//   );
-// }
 import React from "react";
 import  '../index.css'
+import '../styles/Footer.css'
 interface FooterLayoutProps {
   children?: React.ReactNode;
 }
@@ -35,7 +18,7 @@ const FooterLayout: React.FC<FooterLayoutProps> = ({ children }) => {
       <footer>
         <div className="footer-info">
           <p>Todos los derechos reservados &copy; 2024</p>
-          <p>Otra información del footer aquí...</p>
+          <p>Politicas de privacidad</p>
         </div>
       </footer>
     </div>

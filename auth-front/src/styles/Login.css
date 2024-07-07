@@ -1,20 +1,120 @@
-/* .login-form {
+.formEdit {
+  width: 400px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.input-field {
-  margin-bottom: 20px;
-}
-
-.login{
-  padding: 10px;
+  margin: 20px;
   text-align: center;
+  border: 2px solid #5f1d1d;
+  border-radius: 20px;
+  padding: 25px;
+  gap: 10px;
+  background-color: #f6f3f3;
+  position: relative;
+  /* Permite ajustar la sombra */
+  overflow: hidden;
+  /* Evita que la sombra se salga del contenedor */
+
+  /* Efecto de sombra */
+  box-shadow: 0 10px 20px rgba(0, 0, 0.2, 0.3);
+  /* Sombra en la parte inferior */
+
+  /* Estilos adicionales */
+  margin-right: 120px;
+  /* Margen derecho aumentado para el efecto visual */
 }
 
-.errorMessage {
-  /* background-color: #f2dede; */
-  color: #980d0b;
-  /* padding: 10px; */
-} */
+.formEdit:before {
+  content: '';
+  /* Crea un pseudo-elemento */
+  position: absolute;
+  top: -10px;
+  /* Posición sobre el formulario */
+  left: -10px;
+  /* Posición sobre el formulario */
+  right: -10px;
+  /* Posición sobre el formulario */
+  bottom: -10px;
+  /* Posición sobre el formulario */
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  /* Borde sombreado */
+  z-index: -1;
+  /* Detrás del formulario */
+}
+
+
+/* Boton iniciar sesion y crear cuenta */
+.btn {
+  font-size: 19px;
+}
+
+.pulse-effect {
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #934635;
+  /* Color base del botón */
+  transition: transform 0.3s ease-in-out;
+  /* Transición suave del efecto de pulsación */
+}
+
+.pulse-effect:hover {
+  background-color: #ba5536
+    /* Cambia el color al pasar el cursor sobre el botón */
+}
+
+.pulse-effect:active {
+  transform: scale(0.9);
+  /* Reduce ligeramente el tamaño del botón cuando se hace clic */
+}
+
+.createAccount {
+  padding: 20px;
+  color: #2c2828;
+}
+
+.headerPrinc {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* Para separar los elementos a los extremos */
+  padding: 20px;
+  margin: 20px;
+  gap: 50px;
+
+}
+
+.header1 h1 {
+  font-size: 60px;
+}
+
+body {
+  background-color: #fef9f9;
+}
+
+.formData {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  text-align: center;
+  padding: 20px;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.wrapper2 {
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  /* height: 100vh; Alto completo de la ventana del navegador */
+}

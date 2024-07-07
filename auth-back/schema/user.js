@@ -16,14 +16,17 @@ const UserSchema = new Mongoose.Schema({
   ciudad: { type: String },
   provincia: { type: String },
   telefono: { type: Number },
-  rol: {type: String},
-  cp: {type: Number}
+  rol: { type: String },
+  cp: { type: Number }
 });
+
 
 UserSchema.pre("save", function (next) {
   if (this.isModified("password") || this.isNew) {
     const document = this;
 
+
+    // Encriptamos la clave
     bcrypt.hash(document.password, 10, (err, hash) => {
       if (err) {
         next(err);
@@ -37,30 +40,35 @@ UserSchema.pre("save", function (next) {
   }
 });
 
+// Metodo para ver si existe el username ingresado
 UserSchema.methods.usernameExists = async function (username) {
   const result = await Mongoose.model("User").find({ username: username });
   return result.length > 0;
 };
 
-UserSchema.methods.isCorrectPassword = async function (password, hash) {
-  // console.log(password, hash);
-  const same = await bcrypt.compare(password, hash);
+// Metodo para ver si existe el email ingresado
+// UserSchema.methods.emailExists = async function (email) {
+//   const result = await Mongoose.model("User").find({ email: email });
+//   return result.length > 0;
+// };
 
+// Metodo para ver si la contraseña es correcta.
+UserSchema.methods.isCorrectPassword = async function (password, hash) {
+  const same = await bcrypt.compare(password, hash);
   return same;
 };
 
+// Metodo para generar un token de acceso.
 UserSchema.methods.createAccessToken = function () {
   return generateAccessToken(getUserInfo(this));
 };
 
-UserSchema.methods.createRefreshToken = async function (next) {
+// Metodo para generarar el token de actualizacion, para crear un nuevo token de acceso.
+UserSchema.methods.createRefreshToken = async function(next) {
   const refreshToken = generateRefreshToken(getUserInfo(this));
-
-  console.error("refreshToken", refreshToken);
-
   try {
+    // Guarda el token en la BD 
     await new Token({ token: refreshToken }).save();
-    // console.log("Token saved", refreshToken);
     return refreshToken;
   } catch (error) {
     console.error(error);

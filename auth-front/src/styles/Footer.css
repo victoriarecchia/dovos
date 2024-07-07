@@ -1,0 +1,14 @@
+/* Estilos para el footer */
+footer {
+  background-color: #626262;
+  color: white;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    display: flex;
+}
+
+.footer-info{
+  display: flex;
+  /* flex-direction: row ; */
+  justify-content: center;
+  gap: 50px;
+}

@@ -1,32 +1,82 @@
-
-import { Typography, Container, Box } from "@mui/material";
+import { useState } from "react";
 import PortalLayout from "../layout/PortalLayout";
-import FooterLayout from "../layout/FooterLayout";
+import "../styles/Info.css";
 
 const Info = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+
+  const abrirModal = (imagen: string) => {
+    setModalImage(imagen);
+    setModalOpen(true);
+  };
+
+  const cerrarModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <PortalLayout>
+      <div className="infoDovos">
+        <h1>¡Bienvenidos a DOVOS!</h1>
+        <h3>    En DOVOS, nuestro objetivo es conectar a
+          donantes voluntarios con receptores de sangre de una manera rápida y
+          eficiente.</h3>
+        <p className="parrafoInfo">
+          Queremos facilitar el proceso de búsqueda y emparejamiento entre
+          donantes voluntarios y personas necesitadas de sangre, reduciendo así
+          el tiempo necesario para encontrar potenciales donantes y aumentando
+          las posibilidades de salvar vidas.
+        </p>
+      </div>
 
-      <Box  py={2}>
-        <Container maxWidth="md">
-          <Typography variant="h2" align="center" gutterBottom color="black">
-            ¡Bienvenidos a DOVOS!
-            Donantes Voluntarios de Sangre
-          </Typography>
+      <div className="imgInfo">
 
+        <a href="#" className="aInfo" onClick={() => abrirModal('https://i.ibb.co/kgnMh58/compatibilidad.png')}>
+          <img
+            src="https://i.ibb.co/XJqBt4W/gente.jpg"
+            className="imagen-circular"
+            alt="marcador"
+            width="130px"
+          />
+          <p>¿Quienes pueden?</p>
+        </a>
 
-          <Typography variant="body1" paragraph color="textPrimary">
-            En DOVOS, nos dedicamos a facilitar la donación de sangre a través de un sistema en línea innovador. Nuestro objetivo es conectar a donantes voluntarios con receptores de sangre de una manera rápida y eficiente. 
-          </Typography>
+        <a href="#" className="aInfo" onClick={() => abrirModal('https://i.ibb.co/kgnMh58/compatibilidad.png')}>
+          <img src="https://i.ibb.co/3TVHhwT/logo.jpg"
+            className="imagen-circular"
+            alt="preg"
+            width="130px"
+          />
+          <p>¿Por que donar?</p>
+        </a>
 
-          <Typography variant="body1" paragraph color="black">
-      Queremos facilitar el proceso de búsqueda y emparejamiento entre donantes voluntarios y personas necesitadas de sangre, reduciendo así el tiempo necesario para encontrar potenciales donantes y aumentando las posibilidades de salvar vidas.
-          </Typography>
-        </Container>
-      </Box>
-      <FooterLayout/>
+        <a href="https://www.argentina.gob.ar/salud/donarsangre/donde" target="_blank" className="aInfo">
+          <img
+            src="https://i.ibb.co/DLfySH6/marcador.jpg"
+            className="imagen-circular"
+            alt="marcador"
+            width="130px"
+          />
+          <p>¿Donde donar?</p>
+        </a>
+      </div>
+
+      {modalOpen && (
+        <div className="modal" onClick={cerrarModal}>
+          <div className="modal-contenido">
+            <span className="cerrar">&times;</span>
+            <img
+              src={modalImage}
+              alt="Imagen en modal"
+              className="imagen-modal"
+            />
+          </div>
+        </div>
+      )}
     </PortalLayout>
   );
 };
 
 export default Info;
+

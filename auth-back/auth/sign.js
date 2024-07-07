@@ -2,13 +2,13 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 function sign(payload, isAccessToken) {
-  // console.log("payload", payload);
   return jwt.sign(
     payload,
     isAccessToken
       ? process.env.ACCESS_TOKEN_SECRET
       : process.env.REFRESH_TOKEN_SECRET,
     {
+      // Dura 1h el token
       expiresIn: 3600,
       algorithm: "HS256",
     }
@@ -19,6 +19,9 @@ function sign(payload, isAccessToken) {
 function generateAccessToken(user) {
   return sign({ user }, true);
 }
+
+
+// Función para generar un token de actualizacion utilizando jsonwebtoken
 function generateRefreshToken(user) {
   return sign({ user }, false);
 }

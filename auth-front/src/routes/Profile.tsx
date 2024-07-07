@@ -92,6 +92,8 @@ import { useAuth } from "../auth/AuthProvider";
 import { API_URL } from "../auth/authConstants";
 import { Link } from "react-router-dom";
 import '../styles/Profile.css'
+import FooterLayout from "../layout/FooterLayout";
+import { Typography } from "@mui/material";
 
 interface UserData {
   factor: string;
@@ -148,23 +150,23 @@ const Profile: React.FC = () => {
     <PortalLayout>
       <div className="container">
         <form className="form">
-          <h1>PERFIL</h1>
-          <div className="ubicacion">
-            <li> <strong>NOMBRE Y APELLIDO: </strong>{userData.nombre} {userData.apellido}</li>
-            <li> <strong> UBICACION</strong>
+        <Typography variant="h4" textAlign={"center"}>MIS DATOS</Typography>
+        <div className="ubicacion">
+            <li> <strong> NOMBRE Y APELLIDO <br/> </strong>{userData.nombre} {userData.apellido}</li>
+            <li> <strong>UBICACION <br/> </strong>
             <p>Ciudad: {userData.ciudad} </p> 
             <p>Provincia:{userData.provincia}</p>
             </li>
-            <li><strong>CP:</strong>  {userData.cp}</li>
-            <li><strong>FACTOR SANGUINEO:</strong>  {userData.factor}</li>
-            <li><strong>ROL: </strong>{userData.rol}</li>
-            <li><strong>TELEFONO: </strong>{userData.telefono}</li>
+            <li><strong>CODIGO POSTAL <br/> </strong>  {userData.cp}</li>
+            <li><strong>FACTOR SANGUINEO <br/> </strong>  {userData.factor}</li>
+            <li><strong>ROL <br/>  </strong>{userData.rol}</li>
+            <li><strong>TELEFONO <br/> </strong>{userData.telefono}</li>
           </div>
-          <button className="button">
-            <Link to="/me">Editar</Link>
-          </button>
+            <Link to="/me"> <button className="button">EDITAR</button></Link>
+          
         </form>
       </div>
+      <FooterLayout/>
     </PortalLayout>
   );
 };

@@ -103,7 +103,9 @@ const EditProfile: React.FC = () => {
   return (
     <PortalLayout>
       <Container maxWidth="md">
-        <form onSubmit={handleSave} className="formEdit">
+        <div className="wrapper2"> 
+
+        <form onSubmit={handleSave} className="formData">
           <Typography variant="h4" textAlign={"center"}>MIS DATOS</Typography>
 
           <TextField
@@ -210,15 +212,17 @@ const EditProfile: React.FC = () => {
           </FormControl>
 
           {!editMode ? (
-            <Button variant="contained" color="primary" onClick={handleEdit}>
+            <button onClick={handleEdit} className="button">
               Editar
-            </Button>
+            </button>
           ) : (
-            <Button type="submit" variant="contained" color="primary">
+            
+            <button type="submit" className="button">
               Guardar
-            </Button>
+            </button>
           )}
         </form>
+        </div>
       </Container>
     </PortalLayout>
   );

@@ -36,7 +36,6 @@ const Donantes = () => {
         console.error("Error:", error);
       }
     };
-
     fetchUsers();
   }, [auth]);
 
@@ -53,9 +52,9 @@ const Donantes = () => {
   };
 
   const filterUsers = (users: any[], factor: string, provincia: string) => {
-    const filtered = users.filter(user => 
-      user.rol === 'Donante' && 
-      (!factor || user.factor === factor) && 
+    const filtered = users.filter(user =>
+      user.rol === 'Donante' &&
+      (!factor || user.factor === factor) &&
       (!provincia || user.provincia === provincia)
     );
     setFilteredUsers(filtered);
@@ -63,18 +62,22 @@ const Donantes = () => {
 
   return (
     <PortalLayout>
-      <Container className="donantesContainer">
-        <Typography variant="h4" textAlign="center">DONANTES VOLUNTARIOS</Typography>
+      <div className="listas">
+        <div className="tituloListas">
+          <h2>DONANTES</h2>
+        </div>
+
+        {/* Filtros de busqueda */}
         <div className="filters-container">
           <FormControl fullWidth margin="normal">
             <InputLabel id="factor-label">Filtrar por Factor Sanguíneo</InputLabel>
             <Select
               labelId="factor-label"
               id="factor"
-              value={selectedFactor}  
+              value={selectedFactor}
               onChange={handleFactorChange}
-              >
-              <MenuItem value=""> 
+            >
+              <MenuItem value="">
                 <em>Todos</em>
               </MenuItem>
               {FACTORES.map((factor) => (
@@ -85,7 +88,7 @@ const Donantes = () => {
             </Select>
           </FormControl>
 
-          <FormControl fullWidth margin="normal">
+          <FormControl fullWidth margin="normal" >
             <InputLabel id="provincia-label">Filtrar por provincia</InputLabel>
             <Select
               labelId="provincia-label"
@@ -103,30 +106,26 @@ const Donantes = () => {
               ))}
             </Select>
           </FormControl>
-          
         </div>
 
-        {/* LISTA DE DONANTES */}
         <div className="donantes-container">
-        <ul className="donantes-list">
-          {filteredUsers.map((user, index) => (
-            <li key={index} className="donantes-item">
-              <div className="user-info">
-                <strong className="nombre">{user.apellido} {user.nombre}</strong>
-                <div className="ubicacion">
-                  <p>Provincia: {user.provincia}</p>
-                  <p>Ciudad: {user.ciudad}</p>
-                  <p>CP: {user.cp}</p>
-                  <p>Telefono: {user.telefono}</p>
+          <ul className="donantes-list">
+            {filteredUsers.map((user, index) => (
+              <li key={index} className="donantes-item">
+                <div className="user-info">
+                  <p className="userName">{user.apellido} {user.nombre}</p>
+                    <p>Provincia: {user.provincia}</p>
+                    <p>Ciudad: {user.ciudad}</p>
+                    <p>CP: {user.cp}</p>
+                    <p>Telefono: {user.telefono}</p>
+                  <strong className="nombre">Factor: {user.factor}</strong>
                 </div>
-                <strong className="nombre">Factor: {user.factor}</strong>
-              </div>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
         </div>
-      </Container>
-      <FooterLayout/>  
+      </div>
+      <FooterLayout />
     </PortalLayout>
   );
 };

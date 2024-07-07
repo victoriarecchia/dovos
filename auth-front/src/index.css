@@ -1,5 +1,7 @@
+import 
+
 :root {
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
 }
@@ -7,63 +9,64 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  background-color: rgb(255, 255, 255)
 }
 
 label {
   display: block;
 }
 
-.formEdit {
-  width: 400px;
-  /* text-align: center; */
-
-  margin: 0 auto;
+/* Navbar */
+.navbar {
+  background-color: rgb(214, 214, 214);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
+/* Links navbar */  
+.navbar a {
+  color: rgb(105, 32, 32);
+  text-decoration: none;  
+  font-weight: 600;
+}
 
-nav {
-  background-color: #672222;
+a:hover{
+  color:rgb(30, 28, 28);
+  text-decoration: underline  rgb(15, 5, 5);
+
+}
+
+.aInfo{
+  color: black;
 }
 
 nav ul {
   margin: 0;
+  display: flex; /
 }
 
 nav ul li {
   display: inline-flex;
-  padding: 10px;
+    /* padding: 10px; */
+    gap: 50px;
 }
 
-a {
-  color: rgb(157, 151, 151);
-  text-decoration: none;
-}
-
-.dashboard {
-  width: 500px;
-  margin: auto;
-}
-
-
-.errorMessage {
-  color: rgb(235, 23, 23);
-  margin-bottom: 10px;
-}
 /* Estilos para el wrapper que contendrá todo el contenido */
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 50vh; /* Mínimo alto de la ventana del navegador */
+  min-height: 40vh;
+   /* Mínimo alto de la ventana del navegador */
 }
 
 /* Estilos para el contenido principal */
-.content {
-  flex: 1; /* El contenido principal ocupará el espacio disponible */
-}
+/* .content {
+  flex: 2; 
+} */
 
-/* Estilos para el footer */
-footer {
-  background-color: #f8f8f8;
-  padding: 20px;
-  margin-top: auto; /* Empuja el footer hacia abajo */
-}

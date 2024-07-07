@@ -28,7 +28,7 @@ app.use('/api/editprofile', require('./routes/userProfile'));
 // Ruta para renovar el token de acceso utilizando el token de actualización
 app.use("/api/refresh-token", require("./routes/refreshToken"));
 
-app.use("/api/posts", authenticateToken, require("./routes/posts"));
+// app.use("/api/posts", authenticateToken, require("./routes/posts"));
 
 app.use("/api/user", authenticateToken, require("./routes/user"));
 

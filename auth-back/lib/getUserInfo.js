@@ -1,5 +1,5 @@
 
-// OBTENER INFORMACION DEL USUARIO
+// OBTENER INFORMACION DEL USUARIO. No solicita la contraseña
 
 function getUserInfo(user) {
   return {

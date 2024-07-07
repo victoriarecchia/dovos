@@ -20,10 +20,9 @@ router.post("/", async function (req, res, next) {
       );
 
       if (passwordCorrect) {
+        // Autenticar usuario
         const accessToken = user.createAccessToken();
         const refreshToken = await user.createRefreshToken();
-
-        // console.log({ accessToken, refreshToken });
 
         return res.json(
           jsonResponse(200, {
@@ -32,8 +31,8 @@ router.post("/", async function (req, res, next) {
             user: getUserInfo(user),
           })
         );
-      } else {
-
+      } 
+      else {
         return res.status(401).json(
           jsonResponse(401, {
             error: "Nombre de usuario o contraseña incorrecta",

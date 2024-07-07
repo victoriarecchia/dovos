@@ -7,6 +7,7 @@ import { useAuth } from "../auth/AuthProvider";
 import '../styles/Donantes.css';
 import FooterLayout from "../layout/FooterLayout";
 
+
 const Receptores = () => {
   const [users, setUsers] = useState<any[]>([]);
   const [filteredUsers, setFilteredUsers] = useState<any[]>([]);
@@ -53,9 +54,9 @@ const Receptores = () => {
   };
 
   const filterUsers = (users: any[], factor: string, provincia: string) => {
-    const filtered = users.filter(user => 
-      user.rol === 'Receptor' && 
-      (!factor || user.factor === factor) && 
+    const filtered = users.filter(user =>
+      user.rol === 'Receptor' &&
+      (!factor || user.factor === factor) &&
       (!provincia || user.provincia === provincia)
     );
     setFilteredUsers(filtered);
@@ -63,19 +64,23 @@ const Receptores = () => {
 
   return (
     <PortalLayout>
-      <Container className="donantesContainer">
-        <Typography variant="h4" textAlign="center">RECEPTORES DE SANGRE </Typography>
-        <Typography variant="h6" textAlign="center">Contacta a quien te necesita </Typography>
+      <div className="listas">
+        <div className="tituloListas">
+          <h2>RECEPTORES</h2>
+          <h3>Contacta a quien te necesita</h3>
+        </div>
+
+        {/* Filtros de busqueda */}
         <div className="filters-container">
-          <FormControl fullWidth margin="normal">
+          <FormControl fullWidth margin="normal" color="primary" variant="filled">
             <InputLabel id="factor-label">Filtrar por Factor Sanguíneo</InputLabel>
             <Select
               labelId="factor-label"
               id="factor"
-              value={selectedFactor}  
+              value={selectedFactor}
               onChange={handleFactorChange}
             >
-              <MenuItem value=""> 
+              <MenuItem value="">
                 <em>Todos</em>
               </MenuItem>
               {FACTORES.map((factor) => (
@@ -86,8 +91,9 @@ const Receptores = () => {
             </Select>
           </FormControl>
 
-          <FormControl fullWidth margin="normal">
-            <InputLabel id="provincia-label">Filtrar por Provincia</InputLabel>
+          <FormControl fullWidth margin="normal" variant="filled">
+
+            <InputLabel id="provincia-label" >Filtrar por Provincia</InputLabel>
             <Select
               labelId="provincia-label"
               id="provincia"
@@ -96,6 +102,7 @@ const Receptores = () => {
             >
               <MenuItem value="">
                 <em>Todas</em>
+
               </MenuItem>
               {PROVINCIAS.map((provincia) => (
                 <MenuItem key={provincia} value={provincia}>
@@ -104,29 +111,27 @@ const Receptores = () => {
               ))}
             </Select>
           </FormControl>
-        </div>
-        
-        <div className="donantes-container">
 
-        <ul className="donantes-list">
-          {filteredUsers.map((user, index) => (
-            <li key={index} className="donantes-item">
-              <div className="user-info">
-                <strong className="nombre">{user.apellido} {user.nombre}</strong>
-                <div className="ubicacion">
-                  <p>Provincia: {user.provincia}</p>
-                  <p>Ciudad: {user.ciudad}</p>
-                  <p>CP: {user.cp}</p>
-                  <p>Telefono: {user.telefono}</p>
-                </div>
-                <strong className="nombre">Factor: {user.factor}</strong>
-              </div>
-            </li>
-          ))}
-        </ul>
         </div>
-      </Container>
-      <FooterLayout  />  
+
+        <div className="donantes-container">
+          <ul className="donantes-list">
+            {filteredUsers.map((user, index) => (
+              <li key={index} className="donantes-item">
+                <div className="user-info">
+                  <p className="userName">{user.apellido} {user.nombre}</p>
+                    <p>Provincia: {user.provincia}</p>
+                    <p>Ciudad: {user.ciudad}</p>
+                    <p>CP: {user.cp}</p>
+                    <p>Telefono: {user.telefono}</p>
+                  <strong className="factor">Factor: {user.factor}</strong>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <FooterLayout />
     </PortalLayout>
   );
 };

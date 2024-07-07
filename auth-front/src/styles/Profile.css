@@ -4,29 +4,30 @@
   margin: 0 auto;
   padding: 10px;
   margin-top: 20px;
-  background-color: #f9f9f9;
+  /* background-color: DBC8ACs; */
+  background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  border: 3px solid rgb(132, 23, 23);
 }
 
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-bottom: 30px; */
   padding: 20px;
+
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
 
 li {
   list-style: none;
   margin: 5px 0;
   color: #555;
+  padding: 10px;
+  text-align: center;
 }
 
 .ubicacion {
@@ -48,14 +49,10 @@ li {
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
-  text-decoration: none; /* To remove underline from link */
+  text-decoration: none; 
 }
 
 .button:hover {
   background-color: #465059;
-}
-
-.button a {
-  text-decoration: none; 
-  color: white; 
+  color: white;
 }

@@ -49,7 +49,6 @@
       accessToken: string,
       refreshToken: string
     ) {
-      // console.log("setAccessTokenAndRefreshToken", accessToken, refreshToken);
       setAccessToken(accessToken);
       setRefreshToken(refreshToken);
 
@@ -88,6 +87,7 @@
       setIsAuthenticated(false);
     }
 
+
     async function checkAuth() {
       try {
         if (!!accessToken) {
@@ -101,9 +101,10 @@
           //no existe access token
           const token = localStorage.getItem("token");
           if (token) {
-            // console.log("useEffect: token", token);
+
             const refreshToken = JSON.parse(token).refreshToken;
-            //pedir nuevo access token
+
+            // Pedir nuevo access token 
             getNewAccessToken(refreshToken)
               .then(async (newToken) => {
                 const userInfo = await retrieveUserInfo(newToken!);

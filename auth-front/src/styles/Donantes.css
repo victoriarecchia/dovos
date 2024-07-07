@@ -1,38 +1,52 @@
-.donantes-container {
-  max-width: 600px;
-  margin: auto;
-  /* padding: 20px; */
-}
-/* .donantes-container{
-  display: flex;
-  max-width: 800px;
-  padding: 20px;
-} */
+
 .donantes-list {
   list-style: none;
-  padding: 0;
-  /* text-align: center; */
-}
-
-.donantes-item {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  /* justify-content: flex-start; */
+  flex-wrap: wrap
 }
 
 .user-info {
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-.ubicacion {
-  margin-top: 10px;
-}
-
-.donantesContainer{
-  padding: 20px;
-  gap: 20px;
+  width: 300px;
+  margin: 10px;
 }
 
 .filters-container{
   display: flex;
-  margin: 10px;
+  gap: 20px;
+  width: 800px;
+  background-color: rgb(255, 255, 255);
 }
+
+.userName{
+  font-size: 20px;
+  font-weight:500;
+
+}
+
+.donantes-item {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+}
+.donantes-item:hover {
+  /* Aumeta el tamaño a un 105% */
+  transform: scale(1.05); 
+  opacity: 0.8; 
+}
+
+.listas{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.tituloListas{
+  text-align: center;
+  font-size: 30px;
+}
+

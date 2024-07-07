@@ -11,6 +11,7 @@ import Info from "./routes/Info.tsx";
 import Donantes  from "./routes/Donantes.tsx";
 import EditProfile from "./routes/EditProfile.tsx";
 import Receptores from "./routes/Receptores.tsx";
+import Politica from "./routes/Politica.tsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <Signup />,
+  },
+  {
+    path: "/politica",
+    element: <Politica/>,
   },
   // Rutas protegidas
   {
@@ -34,6 +39,7 @@ const router = createBrowserRouter([
         path: "/profile",
         element: <Profile/>,
       },
+
       {
         path: "/donantes",
         element: <Donantes />,

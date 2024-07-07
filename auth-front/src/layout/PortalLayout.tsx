@@ -30,35 +30,36 @@ export default function PortalLayout({ children }: PortalLayoutProps) {
   return (
     <>
       <header>
-        <nav>
-          <ul>
-            {/* <li>
-              <Link to="/dashboard">DOVOS</Link>
-            </li> */}
-                <li>
-                  <Link to="/info">Informacion</Link>
-                </li>
+        <nav className="navbar">
+          <div>
             <li>
-              <Link to="/profile">Perfil</Link>
+              <img src="https://i.ibb.co/x1q4MdF/logo-removebg-preview-2.png" alt="logo-removebg-preview-2" width={50} />
             </li>
-                <li>
-                  <Link to="/donantes">Donantes</Link>
-                </li>
-                <li>
-                  <Link to="/receptores">Receptores</Link>
-                </li>
-            {/* <li>
-              <Link to="/me">{auth.getUser()?.username ?? ""}</Link>
-            </li> */}
-            <li>
-              <a href="#" onClick={handleSignOut}>
-                Cerrar Sesión
-              </a>
-            </li>
-          </ul>
+          </div>
+          <div>
+
+            <ul>
+              <li>
+                <Link to="/info">Sobre DOVOS </Link>
+              </li>
+              <li>
+                <Link to="/profile">Perfil</Link>
+              </li>
+              <li>
+                <Link to="/donantes">Donantes</Link>
+              </li>
+              <li>
+                <Link to="/receptores">Receptores</Link>
+              </li>
+              <li>
+                <a href="#" onClick={handleSignOut}>
+                  Cerrar sesión
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
-
       <main>{children}</main>
     </>
   );
